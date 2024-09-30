@@ -1,26 +1,52 @@
-public class estudiante {
+public class Estudiante {
     private String matricula;
     private String nombre;
-    private double estructura;
     private double evaluacion;
+    private double estructuras;
     private double ingles;
     private double promedio;
 
-    // contructor
-    public estudiante(String m, String n) {
-        // le objetivo del constructor es inicializar el objetivo
+    //Constructor
+    public Estudiante(String m, String n){
+        //Construye el obrjeto e inicializa al objeto
         this.matricula = m;
         this.nombre = n;
     }
 
-    // nadie que no sea estudiante es que seamos de la calse estudiante
-    /**
-     * solo necesitamos un contructor publico,(el contructor siempre es publico) los
-     * consultores y los modificadores
-     * esto con el objetivo de proteger los datos pero te dejo ver los metodos
-     * 
-     */
-    //
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    
+    public double getEstructuras() {
+        return estructuras;
+    }
+
+    public void setEstructuras(double estructuras) {
+        this.estructuras = estructuras;
+    }
+
+    
+    public double getEvaluacion() {
+        return evaluacion;
+    }
+
+    public void setEvaluacion(double evaluacion) {
+        this.evaluacion = evaluacion;
+    }
+
+    public double getIngles() {
+        return ingles;
+    }
+
+    public void setIngles(double ingles) {
+        this.ingles = ingles;
+    }
+
     public String getMatricula() {
         return matricula;
     }
@@ -29,53 +55,18 @@ public class estudiante {
         this.matricula = matric;
     }
 
-    //
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nom) {
-        this.nombre = nom;
-    }
-
-    //
-    public double getEstructura() {
-        return estructura;
-    }
-
-    public void setEstructura(double estruc) {
-        this.estructura = estruc;
-    }
-
-    //
-    public double getEvaluacion() {
-        return evaluacion;
-    }
-
-    public void setEvaluacion(double evalua) {
-        this.evaluacion = evalua;
-    }
-//
-    public double getIngles() {
-        return ingles;
-    }
-
-    public void setIngles(double ingle) {
-        this.ingles = ingle;
-    }
-//
     public double getPromedio() {
         return promedio;
     }
 
-    public void setPromedio(double prom) {
-        this.promedio = prom;
+    public void setPromedio() {
+        this.promedio = (this.estructuras+ this.evaluacion + this.ingles) /3 ;
     }
 
-    @Override 
+    @Override
     public String toString() {
         return "estudiante [matricula=" + matricula + ", nombre=" + nombre + ", promedio=" + promedio + "]";
     }
-    /**todas las clases que estamos creando heredan de la calse objec osea la super clase de java */
+
     
 }
